@@ -11,7 +11,7 @@ $(document).ready(function () {
         '<tr>' +
         '<td><a href="' +
         movie.showPage +
-        '">' + 
+        '">' +
         movie.name +
         '</a></td>' +
         '<td>' +
@@ -22,6 +22,12 @@ $(document).ready(function () {
         '</td>' +
         '<td>' +
         movie.rating +
+        '</td>' +
+        '<td>' +
+        '<button type="button">Delete Movie</button>' +
+        '</td>' +
+        '<td>' +
+        '<button type="button">Edit</button>' +
         '</td>' +
         '</tr>'
       )
