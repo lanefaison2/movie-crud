@@ -1,18 +1,18 @@
 {
   "movies": [
     {
-      "name": "Black Hawk Down",
-      "director": "Ridley Scott",
-      "year": 2001,
-      "rating": 5,
-      "showPage": "http://www.sonypictures.com/movies/blackhawkdown/"
+      "Title": "Black Hawk Down",
+      "Director": "Ridley Scott",
+      "Year": 2001,
+      "Rating": 5,
+      "URL": "http://www.sonypictures.com/movies/blackhawkdown/"
     },
     {
-      "name": "American Sniper",
-      "director": "Clint Eastwood",
-      "year": 2014,
-      "rating": 5,
-      "showPage": "http://www.americansnipermovie.com/"
+      "Title": "American Sniper",
+      "Director": "Clint Eastwood",
+      "Year": 2014,
+      "Rating": 5,
+      "URL": "http://www.americansnipermovie.com/"
     }
   ]
 }

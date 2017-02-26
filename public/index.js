@@ -50,8 +50,8 @@ $(document).ready(function () {
     }
     console.log(addedMovie);
     //This route corresponds to routes.js:22
-    // $.post('/movies', function () {
-    //
-    // })
+    $.post('/movies', addedMovie, function (result) {
+      console.log(result)
+    })
   })
 })
