@@ -26,6 +26,7 @@ router.post('/movies', (req, res) => {
     .write()
     .then(newMovie => {
       res.status(201).send(newMovie)
+      console.log('movies');
     })
     .catch(err => {
       console.log(err);
