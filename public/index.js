@@ -7,7 +7,24 @@ $(document).ready(function () {
   $.get('/movies', function (data) {
     console.log(data)
     data.forEach(function (movie) {
-      $('.movies').append('<tr>' + '<td><a href=' + movie.showPage + '>' + movie.name + '</a></td>' + '<td>' + movie.director + '</td>' + '<td>' + movie.year + '</td>' + '<td>' + movie.rating + '</td>' + '</tr>')
+      $('.movies').append(
+        '<tr>' +
+        '<td><a href="' +
+        movie.showPage +
+        '">' + 
+        movie.name +
+        '</a></td>' +
+        '<td>' +
+        movie.director +
+        '</td>' +
+        '<td>' +
+        movie.year +
+        '</td>' +
+        '<td>' +
+        movie.rating +
+        '</td>' +
+        '</tr>'
+      )
     })
   })
 
