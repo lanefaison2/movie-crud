@@ -13,6 +13,7 @@ app.use('/', routes)
 app.use((req, res) => {
   res.send(message)
 })
+app.use(express.static("public"))
 
 app.listen(PORT, function () {
   console.log('Server listening on port: ' + PORT)
