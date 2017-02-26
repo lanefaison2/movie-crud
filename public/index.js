@@ -3,7 +3,7 @@ $(document).ready(function () {
   $.get('/movies', function (data) {
     console.log(data)
     data.forEach(function (movie) {
-      $('.movies').append('<div>${movie.name}</div>')
+      $('.movies').append('<div>' + ${movie.name} + '</div>')
     })
   })
 
