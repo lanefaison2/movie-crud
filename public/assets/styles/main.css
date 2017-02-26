@@ -70,3 +70,7 @@ body {
 table {
   width: 100%;
 }
+
+tr {
+  margin: 10px auto;
+}

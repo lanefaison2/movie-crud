@@ -29,23 +29,25 @@
           <a class="navbar-brand" href="home.html">
             <img src="./assets/images/camera.png" alt="camera logo">
           </a>
-          <p class="navbar-text page-title">Movie Ratings by Lane</p>
+          <p class="navbar-text page-title">Add A Movie!</p>
         </div>
       </div><!-- /.container-fluid -->
     </nav>
-    <main class="movie-section">
-      <div class="all-movies-and-new-movie">
-        <h1>All Movies</h1>
-        <a href="new.html"><button type="button">New Movie</button></a>
-      </div>
-      <table class="movies">
-        <tr>
-          <th>Title</th>
-          <th>Director</th>
-          <th>Year</th>
-          <th>My Rating</th>
-        </tr>
-      </table>
+    <main class="add-movie-section">
+      <h1>Add A Movie</h1>
+      <form>
+        <label>Title:</label>
+        <input type="text" name="movieTitle">
+        <label>Director:</label>
+        <input type="text" name="movieDirector">
+        <label>Year:</label>
+        <input type="text" name="movieYear">
+        <label>My Rating:</label>
+        <input type="text" name="movieRating">
+        <label>Poster URL:</label>
+        <input type="text" name="movieURL">
+
+      </form>
     </main>
 
     <nav class="navbar navbar-inverse navbar-fixed-bottom">
