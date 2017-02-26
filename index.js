@@ -1,8 +1,13 @@
-
 $(document).ready(function () {
 
-  $.get('/db', function(data) {
+  $.get('/movies', function (data) {
     console.log(data)
+    data.forEach(function (movie) {
+      $('.movies').append('<div>${movie.name}</div>')
+    })
   })
 
+  $.get('/movies/1', function (data) {
+    console.log(data);
+  })
 })
