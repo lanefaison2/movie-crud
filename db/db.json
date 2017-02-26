@@ -4,13 +4,15 @@
       "name": "Black Hawk Down",
       "director": "Ridley Scott",
       "year": 2001,
-      "rating": 5
+      "rating": 5,
+      "showPage": "http://www.sonypictures.com/movies/blackhawkdown/"
     },
     {
       "name": "American Sniper",
       "director": "Clint Eastwood",
       "year": 2014,
-      "rating": 5
+      "rating": 5,
+      "showPage": "http://www.americansnipermovie.com/"
     }
   ]
 }
