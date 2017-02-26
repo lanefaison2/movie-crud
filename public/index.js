@@ -48,10 +48,9 @@ $(document).ready(function () {
       Rating: $('#movieRating').val(),
       "URL": $('#movieURL').val()
     }
-    console.log(addedMovie);
     //This route corresponds to routes.js:22
-    $.post('/movies', addedMovie, function (result) {
-      console.log(result)
+    $.post('/movies', addedMovie, function () {
+      console.log('movies');
     })
   })
 })
