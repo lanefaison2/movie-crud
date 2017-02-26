@@ -61,3 +61,7 @@ body {
 .movies div {
   color: #000;
 }
+
+table {
+  width: 100%;
+}
