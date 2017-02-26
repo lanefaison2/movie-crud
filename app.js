@@ -6,9 +6,14 @@ const bodyParser = require('body-parser')
 
 const PORT = process.env.PORT || 8080
 
+var message = require('./message').message(PORT)
+
 app.use(bodyParser.json())
 app.use('/', routes)
+app.use((req, res) => {
+  res.send(message)
+})
 
 app.listen(PORT, function () {
-  console.log('Server listening on port 8080')
+  console.log('Server listening on port: ' + PORT)
 })
