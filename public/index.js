@@ -49,6 +49,8 @@ $(document).ready(function () {
       "URL": $("#movieURL").val()
     }
     var jsonMovie = JSON.stringify(newMovie);
+
+    console.log(jsonMovie);
     //This route corresponds to routes.js:22
     $.post('/movies', jsonMovie)
 
