@@ -24,10 +24,10 @@ $(document).ready(function () {
         movie.Rating +
         '</td>' +
         '<td>' +
-        '<button type="button">Delete Movie</button>' +
+        '<button type="button" class="delete-btn">Delete Movie</button>' +
         '</td>' +
         '<td>' +
-        '<button type="button">Edit</button>' +
+        '<button type="button" class="edit-btn">Edit</button>' +
         '</td>' +
         '</tr>'
       )

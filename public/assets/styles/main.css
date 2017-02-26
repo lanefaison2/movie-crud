@@ -80,6 +80,16 @@ td {
   padding-bottom: 20px;
 }
 
+.delete-btn {
+  background: red;
+  color: #fff;
+}
+
+.edit-btn {
+  background: blue;
+  color: #fff;
+}
+
 .add-movie-section {
   background: #fff;
   margin: 150px;
