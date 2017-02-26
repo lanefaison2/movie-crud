@@ -7,16 +7,8 @@
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lanefaison2/movie-crud.git"
-  },
   "author": "Lane Faison",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lanefaison2/movie-crud/issues"
-  },
-  "homepage": "https://github.com/lanefaison2/movie-crud#readme",
   "dependencies": {
     "body-parser": "^1.16.1",
     "express": "^4.14.1",
