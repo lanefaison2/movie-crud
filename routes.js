@@ -22,7 +22,7 @@ router.get('/movies/:id', (req, res) => {
 //CRUD Create
 router.post('/movies', (req, res) => {
   db.get('movies')
-    .push(req)
+    .push(req.body)
     .write()
     .then(newMovie => {
       res.status(201).send(newMovie)

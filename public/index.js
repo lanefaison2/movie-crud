@@ -42,11 +42,11 @@ $(document).ready(function () {
   $('.add-movie-btn').on('click', function (event) {
     event.preventDefault()
     var newMovie = {
-      "Title": $('#movieTitle').val(),
-      "Director": $('#movieDirector').val(),
-      "Year": $('#movieYear').val(),
-      "Rating": $('#movieRating').val(),
-      "URL": $('#movieURL').val()
+      "Title": $("#movieTitle").val(),
+      "Director": $("#movieDirector").val(),
+      "Year": $("#movieYear").val(),
+      "Rating": $("#movieRating").val(),
+      "URL": $("#movieURL").val()
     }
     //This route corresponds to routes.js:22
     $.post('/movies', newMovie)
