@@ -48,8 +48,8 @@ $(document).ready(function () {
       "Rating": $("#movieRating").val(),
       "URL": $("#movieURL").val()
     }
-
-    console.log($(this).serialize());
+    var str = jQuery.param(newMovie)
+    console.log(str);
     //This route corresponds to routes.js:22
     // $.post('/movies', newMovie)
     // $.get('/movies', function (data) {
