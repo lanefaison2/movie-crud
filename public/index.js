@@ -40,13 +40,13 @@ $(document).ready(function () {
   // })
 
   $('.add-movie-btn').on('click', function (event) {
-    event.preventDefault()
+    // event.preventDefault()
     var addedMovie = {
-      Title: $('#movieTitle').txt(),
-      Director: $('#movieDirector').txt(),
-      Year: $('#movieYear').txt(),
-      Rating: $('#movieRating').txt(),
-      "URL": $('#movieURL').txt()
+      Title: $('#movieTitle').val(),
+      Director: $('#movieDirector').val(),
+      Year: $('#movieYear').val(),
+      Rating: $('#movieRating').val(),
+      "URL": $('#movieURL').val()
     }
     //This route corresponds to routes.js:22
     $.post('/movies', addedMovie, function () {
