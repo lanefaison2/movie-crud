@@ -39,7 +39,7 @@ $(document).ready(function () {
   //   console.log(data)
   // })
 
-  $('.new-movie-form').on('submit', function (event) {
+  $('#new-movie-form').on('submit', function (event) {
     event.preventDefault()
     var newMovie = {
       "Title": $("#movieTitle").val(),
@@ -48,7 +48,7 @@ $(document).ready(function () {
       "Rating": $("#movieRating").val(),
       "URL": $("#movieURL").val()
     }
-    var jsonMovie = JSON.stringify(newMovie).serializeArray()
+    var jsonMovie = JSON.stringify($("#new-movie-form").serializeArray())
 
     console.log(jsonMovie)
 
