@@ -39,21 +39,20 @@ $(document).ready(function () {
   //   console.log(data)
   // })
 
-  $('.add-movie-btn').on('submit', function (event) {
+  $('.add-movie-btn').on('click', function (event) {
     event.preventDefault()
     var newMovie = {
-      Title: $('#movieTitle').val(),
-      Director: $('#movieDirector').val(),
-      Year: $('#movieYear').val(),
-      Rating: $('#movieRating').val(),
+      "Title": $('#movieTitle').val(),
+      "Director": $('#movieDirector').val(),
+      "Year": $('#movieYear').val(),
+      "Rating": $('#movieRating').val(),
       "URL": $('#movieURL').val()
     }
-    console.log($(this).serialize())
     //This route corresponds to routes.js:22
-    // $.post('/movies', newMovie)
-    // $.get('/movies', function (data) {
-    //   console.log(data)
-    // })
+    $.post('/movies', newMovie)
+    $.get('/movies', function (data) {
+      console.log(data)
+    })
   })
 
   $('.delete-btn').on('click', function (event) {
