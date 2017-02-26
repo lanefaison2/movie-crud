@@ -5,7 +5,7 @@
 1. Fork and Clone this repository
 1. Create CRUD Routes.
 1. Style your site. However, CRUD is the priority.
-1. Deploy your site
+1. Deploy your site: https://salty-chamber-44152.herokuapp.com/
 
 ## HOME PAGE
 
@@ -38,15 +38,12 @@
 ![Index](/mockups/show.png)
 
 
-## ROUTES 
- 
+## ROUTES
+
 Use the RESTful routes for each of your routes.
 
 - GET /movies   _lists all movies_
 - POST /movies  _creates a new movie_
 - GET /movies/:id  _show one movie_
 - GET /movies/:id/edit _form to edit a movie_
-- ... etc 
-
-
-
+- ... etc

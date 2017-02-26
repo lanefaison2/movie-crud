@@ -1,0 +1,14 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "name": "Black Hawk Down",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "name": "American Sniper",
+      "rating": 5
+    }
+  ]
+}
