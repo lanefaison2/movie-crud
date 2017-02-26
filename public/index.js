@@ -5,23 +5,23 @@ $(document).ready(function () {
 
   //This route (not file) corresponds to routes.js:9
   $.get('/movies', function (data) {
-    console.log(data)
+    // console.log(data)
     data.forEach(function (movie) {
       $('.movies').append(
         '<tr>' +
         '<td><a href="' +
-        movie.showPage +
+        movie.URL +
         '">' +
-        movie.name +
+        movie.Title +
         '</a></td>' +
         '<td>' +
-        movie.director +
+        movie.Director +
         '</td>' +
         '<td>' +
-        movie.year +
+        movie.Year +
         '</td>' +
         '<td>' +
-        movie.rating +
+        movie.Rating +
         '</td>' +
         '<td>' +
         '<button type="button">Delete Movie</button>' +
@@ -34,10 +34,10 @@ $(document).ready(function () {
     })
   })
 
-  //This route (not file) corresponds to routes.js:15
-  $.get('/movies/1', function (data) {
-    console.log(data)
-  })
+  // //This route (not file) corresponds to routes.js:15
+  // $.get('/movies/1', function (data) {
+  //   console.log(data)
+  // })
 
   $('.add-movie-btn').on('click', function (event) {
     event.preventDefault()
@@ -50,7 +50,7 @@ $(document).ready(function () {
     }
     //This route corresponds to routes.js:22
     $.post('/movies', addedMovie, function () {
-      console.log('movies');
+
     })
   })
 })
