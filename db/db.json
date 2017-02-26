@@ -1,13 +1,15 @@
 {
   "movies": [
     {
-      "id": 1,
       "name": "Black Hawk Down",
+      "director": "Ridley Scott",
+      "year": 2001,
       "rating": 5
     },
     {
-      "id": 3,
       "name": "American Sniper",
+      "director": "Clint Eastwood",
+      "year": 2014,
       "rating": 5
     }
   ]

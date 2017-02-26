@@ -7,7 +7,7 @@ $(document).ready(function () {
   $.get('/movies', function (data) {
     console.log(data)
     data.forEach(function (movie) {
-      $('.movies').append('<div>' + movie.name + '</div>')
+      $('.movies').append('<tr>' + '<td>' + movie.name + '</td>' + '<td>' + movie.director + '</td>' + '<td>' + movie.year + '</td>' + '<td>' + movie.rating + '</td>' + '</tr>')
     })
   })
 
