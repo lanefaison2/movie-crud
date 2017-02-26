@@ -52,3 +52,7 @@ body {
 .btn-hovered {
   border: 4px solid #ff1f1f;
 }
+
+.movies p {
+  color: white;
+}

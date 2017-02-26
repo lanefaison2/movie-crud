@@ -10,6 +10,7 @@ const db = low('db/db.json', {
 router.get('/movies', (req, res) => {
   const movies = db.get('movies')
   res.send(movies)
+  console.log("got movies");
 })
 
 //CRUD Read by id
@@ -17,6 +18,7 @@ router.get('/movies/:id', (req, res) => {
   const movieId = parseInt(req.params.id)
   const singleMovie = db.get('movies').find({id: movieId})
   res.send(singleMovie)
+  console.log("got a certain movie");
 })
 
 //CRUD Create
@@ -60,6 +62,5 @@ router.delete('/movies/:id', (req, res) => {
       console.log(err);
     })
 })
-
 
 module.exports = router
