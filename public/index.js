@@ -52,9 +52,9 @@ $(document).ready(function () {
     console.log(str);
     //This route corresponds to routes.js:22
     $.post('/movies', str)
-    // $.get('/movies', function (data) {
-    //   console.log(data)
-    // })
+    $.get('/movies', function (data) {
+      console.log(data)
+    })
   })
 
   $('.delete-btn').on('click', function (event) {
