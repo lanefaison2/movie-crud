@@ -62,6 +62,7 @@ body {
   background: #fff;
   margin: 150px;
   padding: 50px;
+  min-width: 725px;
 }
 .movies div {
   color: #000;
