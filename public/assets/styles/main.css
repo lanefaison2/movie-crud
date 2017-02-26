@@ -59,7 +59,7 @@ body {
 }
 
 .movie-section {
-  background: white;
+  background: #fff;
   margin: 150px;
   padding: 50px;
 }
@@ -73,4 +73,10 @@ table {
 
 tr {
   margin: 10px auto;
+}
+
+.add-movie-section {
+  background: #fff;
+  margin: 150px;
+  padding: 50px;
 }
