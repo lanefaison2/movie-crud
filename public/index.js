@@ -56,8 +56,8 @@ $(document).ready(function () {
     $.post('/movies', jsonMovie)
     //
     // $.get('/movies', function (result) {
-    //   console.log(result)
-    })
+    //  console.log(result)
+    // })
   })
 
   $('.delete-btn').on('click', function (event) {
