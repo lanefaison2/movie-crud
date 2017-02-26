@@ -51,5 +51,12 @@ $(document).ready(function () {
     console.log(newMovie)
     //This route corresponds to routes.js:22
     $.post('/movies', newMovie)
+    $.get('/movies', function (data) {
+      console.log(data)
+    })
+  })
+
+  $('.delete-btn').on('click', function (event) {
+    $.delete
   })
 })
