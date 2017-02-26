@@ -48,10 +48,10 @@ $(document).ready(function () {
       "Rating": $("#movieRating").val(),
       "URL": $("#movieURL").val()
     }
-
+    var jsonMovie = JSON.stringify(newMovie);
     //This route corresponds to routes.js:22
-    $.post('/movies', newMovie)
-    
+    $.post('/movies', jsonMovie)
+
     $.get('/movies', function (result) {
       console.log(result)
     })
