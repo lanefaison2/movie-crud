@@ -71,6 +71,10 @@ table {
   width: 100%;
 }
 
+th {
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
 td {
   padding-bottom: 20px;
 }
