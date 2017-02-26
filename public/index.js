@@ -53,11 +53,10 @@ $(document).ready(function () {
     console.log(jsonMovie)
 
     //This route corresponds to routes.js:22
-    $.post('/movies', jsonMovie)
-    //
-    // $.get('/movies', function (result) {
-    //  console.log(result)
-    // })
+    $.post('/movies', jsonMovie, function (result) {
+      console.log(result)
+    })
+
   })
 
   $('.delete-btn').on('click', function (event) {
