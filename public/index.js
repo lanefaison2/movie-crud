@@ -48,10 +48,12 @@ $(document).ready(function () {
       "Rating": $("#movieRating").val(),
       "URL": $("#movieURL").val()
     }
-    var str = jQuery.param(newMovie)
-    console.log(str);
+    var str = $.param(newMovie)
+    var str2 = decodeURIComponent($.param(newMovie))
+    console.log(str)
+    console.log(str2)
     //This route corresponds to routes.js:22
-    $.post('/movies', str)
+    $.post('/movies', str2)
     $.get('/movies', function (data) {
       console.log(data)
     })
