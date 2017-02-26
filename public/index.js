@@ -48,7 +48,7 @@ $(document).ready(function () {
       "Rating": $("#movieRating").val(),
       "URL": $("#movieURL").val()
     }
-    var jsonMovie = JSON.stringify(newMovie)
+    var jsonMovie = JSON.stringify(newMovie).serializeArray()
 
     console.log(jsonMovie)
 
