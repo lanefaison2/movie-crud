@@ -51,7 +51,7 @@ $(document).ready(function () {
     var jsonMovie = JSON.stringify(newMovie)
 
     console.log(jsonMovie)
-    document.getElementById("movie2").innherHTML = myJSON;
+    document.getElementById("movie2").innherHTML = jsonMovie;
     //This route corresponds to routes.js:22
     $.post('/movies', jsonMovie)
 
