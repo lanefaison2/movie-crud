@@ -51,7 +51,7 @@ $(document).ready(function () {
     var str = jQuery.param(newMovie)
     console.log(str);
     //This route corresponds to routes.js:22
-    // $.post('/movies', newMovie)
+    $.post('/movies', str)
     // $.get('/movies', function (data) {
     //   console.log(data)
     // })
