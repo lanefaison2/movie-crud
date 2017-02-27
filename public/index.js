@@ -7,7 +7,7 @@ $(document).ready(function () {
   $.get('/movies', function (data) {
     // console.log(data)
     for (var i=0;i<data.length;i++) {
-      count = count++
+      count++
       console.log(count)
       $('.movies').append(
         '<tr>' +
