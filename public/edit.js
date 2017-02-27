@@ -22,10 +22,10 @@ $(document).ready(function () {
 
     // var clickedId = $(this).closest('tr').attr('id')
 
-    var clickedTitle = movie.Title.text()
-    var clickedDirector = movie.Director.text()
-    var clickedYear = movie.Year.text()
-    var clickedRating = movie.Rating.text()
+    var clickedTitle = movie.Title
+    var clickedDirector = movie.Director
+    var clickedYear = movie.Year
+    var clickedRating = movie.Rating
     console.log(clickedTitle)
     console.log(clickedDirector)
     console.log(clickedYear)
