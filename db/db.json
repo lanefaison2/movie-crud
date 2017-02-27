@@ -10,7 +10,7 @@
     },
     {
       "Title": "American Sniper",
-      "Director": "Rigley Scott",
+      "Director": "Ridley Scott",
       "Year": "2014",
       "Rating": "5",
       "URL": "http://www.impawards.com/2014/posters/american_sniper.jpg",
@@ -23,6 +23,38 @@
       "Rating": "5",
       "URL": "http://www.impawards.com/2013/posters/lone_survivor.jpg",
       "id": 3
+    },
+    {
+      "Title": "Saving Private Ryan",
+      "Director": "Steven Spielberg",
+      "Year": "1998",
+      "Rating": "5",
+      "URL": "https://images-na.ssl-images-amazon.com/images/M/MV5BZjhkMDM4MWItZTVjOC00ZDRhLThmYTAtM2I5NzBmNmNlMzI1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_UY1200_CR93,0,630,1200_AL_.jpg",
+      "id": 4
+    },
+    {
+      "Title": "Gladiator",
+      "Director": "Ridley Scott",
+      "Year": "2000",
+      "Rating": "4",
+      "URL": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgwMzQzNTQ1Ml5BMl5BanBnXkFtZTgwMDY2NTYxMTE@._V1_UY1200_CR90,0,630,1200_AL_.jpg",
+      "id": 5
+    },
+    {
+      "Title": "Revenant",
+      "Director": "Alejandro González Iñárritu",
+      "Year": "2015",
+      "Rating": "4",
+      "URL": "http://t1.gstatic.com/images?q=tbn:ANd9GcS5yuCSZqK5Hha5lElqZr2SCYVY-sYycKZ8PJ8POfNQkOmSuo5B",
+      "id": 6
+    },
+    {
+      "Title": "Waterworld",
+      "Director": "Kevin Reynolds",
+      "Year": "1995",
+      "Rating": "2",
+      "URL": "https://images-na.ssl-images-amazon.com/images/M/MV5BYzE4NTRmMDYtNWYzYi00YmNkLTk4NDEtYjFmMDc4ODQ3ODY2XkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_.jpg",
+      "id": 7
     }
   ]
 }

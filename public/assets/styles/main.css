@@ -32,7 +32,7 @@ body {
 }
 
 .navbar-header .navbar-brand:hover {
-  background: #ff1f1f;
+  background: #ca0;
 }
 .navbar-brand img {
   height: 30px;
@@ -47,12 +47,14 @@ body {
 /*********************************/
 
 .go-to-ratings-btn {
-  background: #00f06c;
+  background: #ca0;
   border-radius: 100px;
   border: 3px solid #fff;
   height: 105px;
   cursor: pointer;
   outline-color: #000;
+  color: #000;
+  font-weight: bolder;
 }
 
 .lower-home {
@@ -82,7 +84,7 @@ body {
   margin: 150px;
   padding: 50px;
   min-width: 725px;
-  border: 4px solid #ff1f1f;
+  border: 4px solid #ca0;
 }
 .movies div {
   color: #000;
@@ -95,34 +97,43 @@ table {
 th {
   padding-bottom: 20px;
   text-decoration: underline;
-}
-td {
-  padding-bottom: 20px;
+  font-size: 18px;
 }
 
-.ratingClass, th {
+td {
+  padding-bottom: 20px;
+  font-size: 15px;
+}
+
+.ratingClass {
   text-align: center;
 }
 
 .delete-btn {
-  background: red;
+  background: #ff6161;
   color: #fff;
+}
+
+.delete-btn:hover {
+  background: #ff2e2e;
 }
 
 .edit-btn {
-  background: blue;
+  background: #619eff;
   color: #fff;
 }
 
+.edit-btn:hover {
+  background: #1a71ff;
+}
 .new-movie-btn {
-  background: #00f06c;
+  background: #a0ff99;
   color: #000;
   font-weight: bolder;
 }
 
 .new-movie-btn:hover {
-  background: #00c03a;
-  color: #ddd;
+  background: #62ff57;
 }
 
 .add-movie-section, .show-section {
@@ -131,7 +142,7 @@ td {
   padding: 50px;
   width: 400px;
   height: auto;
-  border: 4px solid #ff1f1f;
+  border: 4px solid #ca0;
 }
 
 #new-movie-form div {

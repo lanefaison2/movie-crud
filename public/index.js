@@ -31,10 +31,10 @@ $(document).ready(function () {
         data[i].Rating +
         '</td>' +
         '<td>' +
-        '<button type="button" class="delete-btn">Delete Movie</button>' +
+        '<button type="button" class="delete-btn"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>' +
         '</td>' +
         '<td>' +
-        `<a href="edit.html?id=${count}"><button type="button" class="edit-btn">Edit</button></a>` +
+        `<a href="edit.html?id=${count}"><button type="button" class="edit-btn"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></a>` +
         '</td>' +
         '</tr>'
       )
