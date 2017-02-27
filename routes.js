@@ -21,7 +21,7 @@ router.get('/movies/:id', (req, res) => {
 
 //CRUD Create
 router.post('/movies', (req, res) => {
-  console.log(req.body);
+  console.log("body: " + req.body);
   db.get('movies')
     .push(req.body)
     .write()
