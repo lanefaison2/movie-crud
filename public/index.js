@@ -40,7 +40,7 @@ $(document).ready(function () {
   // })
 
   $('#new-movie-form').on('submit', function (event) {
-    // event.preventDefault()
+    event.preventDefault()
     var newMovie = {
       "Title": $("#movieTitle").val(),
       "Director": $("#movieDirector").val(),
