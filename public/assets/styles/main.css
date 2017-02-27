@@ -28,6 +28,10 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+
+.navbar-brand:hover {
+  background: #ff1f1f;
+}
 .navbar-brand img {
   height: 30px;
 }
