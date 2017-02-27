@@ -72,22 +72,22 @@ $(document).ready(function () {
       console.log(result)
     })
   })
+})
 
-  $('.delete-btn').on('click', function (event) {
-    $.ajax({
-      url: '/movies/:id',
-      type: 'DELETE',
-      success: function (result) {
-        console.log(result)
-        console.log("working?")
-        $('#' + '/movies/:id').remove()
-      }
-    })
-    $.get('movies', function (data) {
-      console.log(data);
-    })
-    // $.delete('/movies/:id', function () {
-    //   $(this).remove()
-    // })
+$(document).on('click','.delete-btn' function (event) {
+  $.ajax({
+    url: '/movies/:id',
+    type: 'DELETE',
+    success: function (result) {
+      console.log(result)
+      console.log("working?")
+      $('#' + '/movies/:id').remove()
+    }
   })
+  $.get('movies', function (data) {
+    console.log(data);
+  })
+  // $.delete('/movies/:id', function () {
+  //   $(this).remove()
+  // })
 })
