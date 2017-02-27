@@ -2,11 +2,13 @@ $(document).ready(function () {
 
   // You can only communicate with the server through HTTP requests in here
   // Here we are living on the client's Chrome browser
-
+  var count = 0
   //This route (not file) corresponds to routes.js:9
   $.get('/movies', function (data) {
     // console.log(data)
-    data.forEach(function (movie) {
+    for (var i=0;i<data.length;i++) {
+      count = count++
+      console.log(count)
       $('.movies').append(
         '<tr>' +
         '<td><a href="' +
@@ -31,7 +33,9 @@ $(document).ready(function () {
         '</td>' +
         '</tr>'
       )
-    })
+    }
+    // data.forEach(function (movie) {
+    // })
   })
 
 
@@ -65,11 +69,12 @@ $(document).ready(function () {
 
   $('.delete-btn').on('click', function (event) {
     $.ajax({
-      url: '/movies',
+      url: '/movies/Title',
       type: 'DELETE',
       success: function (result) {
         console.log(result);
         console.log("working?");
+        $(this).remove()
       }
     })
     // $.delete('/movies/:id', function () {
