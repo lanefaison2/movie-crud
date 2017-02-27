@@ -1,3 +1,4 @@
+var idEdit
 
 $(document).ready(function () {
 
@@ -15,9 +16,10 @@ $(document).ready(function () {
     });
     return returner;
   }
-  var id = getUrlParameter('id')
 
-  $.get(`/movies/${id}`, function (movie) {
+  idEdit = getUrlParameter('id')
+
+  $.get(`/movies/${idEdit}`, function (movie) {
     console.log(movie)
 
     $('#movieTitle').val(movie.Title)
@@ -27,26 +29,26 @@ $(document).ready(function () {
     $('#movieURL').val(movie.URL)
 
   })
+})
 
-  $(document).on('click', '.edit-movie-btn', function (event) {
-    event.preventDefault()
-    var editedMovie = {
-      Title: $("#movieTitle").val(),
-      Director: $("#movieDirector").val(),
-      Year: $("#movieYear").val(),
-      Rating: $("#movieRating").val(),
-      "URL": $("#movieURL").val(),
-      id: id
+$(document).on('click', '.edit-movie-btn', function (event) {
+  event.preventDefault()
+  var editedMovie = {
+    Title: $("#movieTitle").val(),
+    Director: $("#movieDirector").val(),
+    Year: $("#movieYear").val(),
+    Rating: $("#movieRating").val(),
+    "URL": $("#movieURL").val(),
+    id: idEdit
+  }
+
+  $.ajax({
+    url: '/movies',
+    type: 'PUT',
+    data: editedMovie,
+    success: function (results) {
+      console.log(results)
     }
-
-    $.ajax({
-      url: '/movies',
-      type: 'PUT',
-      data: newMovie,
-      success: function (results) {
-        console.log(results)
-      }
-    })
   })
 })
 
