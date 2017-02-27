@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const low = require('lowdb')
 const fileAsync = require('lowdb/lib/storages/file-async')
-const db = low('.db/db.json', {
+const db = low('db/db.json', {
   storage: fileAsync
 })
 
@@ -21,6 +21,7 @@ router.get('/movies/:id', (req, res) => {
 
 //CRUD Create
 router.post('/movies', (req, res) => {
+  console.log(req.body);
   db.get('movies')
     .push(req.body)
     .write()
