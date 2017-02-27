@@ -1,24 +1,26 @@
 
 $(document).ready(function () {
 
-  //   window.location.search.split("&")
-  //   window.location = "/edit.html?=querystring"
+  window.location.search.split("&")
+  window.location = "/edit.html?=querystring"
+  console.log(querystring)
+  console.log(window.location);
 
-  function getUrlParameter(sParam) {
-    const sPageURL = decodeURIComponent(window.location.search.substring(1));
-    const sURLVariables = sPageURL.split('&');
-    let returner;
-
-    sURLVariables.forEach((paraName) => {
-      const sParameterName = paraName.split('=');
-      if (sParameterName[0] === sParam) {
-        returner = sParameterName[1] === undefined ? true : sParameterName[1];
-      }
-    });
-    console.log(returner);
-    return returner;
-  }
-  getUrlParameter();
+  // function getUrlParameter(sParam) {
+  //   const sPageURL = decodeURIComponent(window.location.search.substring(1));
+  //   const sURLVariables = sPageURL.split('&');
+  //   let returner;
+  //
+  //   sURLVariables.forEach((paraName) => {
+  //     const sParameterName = paraName.split('=');
+  //     if (sParameterName[0] === sParam) {
+  //       returner = sParameterName[1] === undefined ? true : sParameterName[1];
+  //     }
+  //   });
+  //   console.log(returner);
+  //   return returner;
+  // }
+  // getUrlParameter();
 
 })
 
