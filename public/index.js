@@ -50,8 +50,8 @@ $(document).ready(function () {
     }
 
     console.log(newMovie)
-    
-    var jsonMovie = JSON.serialize(newMovie)
+
+    var jsonMovie = newMovie.serialize()
 
     console.log(jsonMovie)
 
