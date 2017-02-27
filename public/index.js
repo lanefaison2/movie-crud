@@ -92,7 +92,7 @@ $(document).on('click','.edit-btn', function () {
   var clickedRating = $('#' + clickedId + ' .titleRating').text()
 
   var html = '<h1>Some text: ' + clickedTitle + '</h1>'
-  window.open(this.parent().href).document.body += html
+  window.open(this.parent().href).document.body.innerHTML += html
   // $(newWindow.document.body.form).append('<h1>Some text: ' + clickedTitle + '</h1>')
 
   return false;
