@@ -69,6 +69,7 @@ $(document).ready(function () {
       type: 'DELETE',
       success: function (result) {
         console.log(result);
+        console.log("working?");
       }
     })
     // $.delete('/movies/:id', function () {
