@@ -84,7 +84,7 @@ $(document).on('click','.delete-btn', function () {
 
 $(document).on('click','.edit-btn', function () {
   var clickedId = $(this).closest('tr').attr('id')
-  var clickedTitle = $('#' + clickedId + ' .titleClass')
+  var clickedTitle = $('#' + clickedId + ' .titleClass').txt()
   console.log("clickedTitle: " + clickedTitle)
   // var clickedTitle = $(this).closest('tr')
   // var clickedDirector =
