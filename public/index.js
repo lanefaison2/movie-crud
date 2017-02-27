@@ -84,7 +84,7 @@ $(document).on('click','.delete-btn', function () {
 
 $(document).on('click','.edit-btn', function () {
   var clickedId = $(this).closest('tr').attr('id')
-  window.open(this.href);
+  window.open(this.parent().href);
   return false;
 
 })
