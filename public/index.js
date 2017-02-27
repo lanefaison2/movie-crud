@@ -64,6 +64,6 @@ $(document).ready(function () {
   })
 
   $('.delete-btn').on('click', function (event) {
-    $.delete
+    $.delete('/movies/:Title')
   })
 })

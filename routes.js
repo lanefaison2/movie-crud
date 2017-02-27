@@ -49,10 +49,14 @@ router.put('/movies/:id', (req, res) => {
 })
 
 //CRUD delete
-router.delete('/movies/:id', (req, res) => {
-  const movieId = parseInt(req.params.id)
+//Orginal: router.delete('/movies/:id', (req, res) => {
+router.delete('/movies/:Title', (req, res) => {
+
+  //Original: const movieId = parseInt(req.params.id)
+  const movieId = req.params.Title
   db.get('movies')
-    .remove({id: movieId})
+    //Original: .remove({id: movieId})
+    .remove({Title: movieId})
     .write()
     .then(deletedMovie => {
       res.status(204).send()
