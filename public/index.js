@@ -5,12 +5,8 @@ var newId = 0
 
 $(document).ready(function () {
 
-  // You can only communicate with the server through HTTP requests in here
-  // Here we are living on the client's Chrome browser
-
   //GETTING ALL THE MOVIES
   $.get('/movies', function (data) {
-    // console.log(data)
     for (var i=0;i<data.length;i++) {
 
       count++
@@ -42,6 +38,7 @@ $(document).ready(function () {
   })
 })
 
+// ADDING A NEW MOVIE
 $(document).on('click', '.add-movie-btn', function (event) {
   event.preventDefault()
   newId++
@@ -65,11 +62,10 @@ $(document).on('click', '.add-movie-btn', function (event) {
   })
 })
 
+// DELETING A MOVIE
 $(document).on('click','.delete-btn', function () {
-  // This method targets the id of the <tr> contained the clicked button.
   var clickedId = $(this).closest('tr').attr('id')
 
-  // DELETING A NEW MOVIE
   $.ajax({
     url: '/movies/' + clickedId,
     type: 'DELETE',
@@ -79,12 +75,3 @@ $(document).on('click','.delete-btn', function () {
     }
   })
 })
-
-// $(document).on('click','.edit-btn', function () {
-//
-//   var clickedId = $(this).closest('tr').attr('id')
-//   // This method targets the id of the <tr> contained the clicked button.
-//   window.location.search.split("&")
-//   window.location = "/edit.html?=querystring"
-//
-// })

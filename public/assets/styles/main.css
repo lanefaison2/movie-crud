@@ -44,7 +44,7 @@ body {
   color: #fff;
   margin: 0 0 0 20px;
 }
-/*********************************/
+/************ HOME *****************/
 
 .go-to-ratings-btn {
   background: #ca0;
@@ -90,6 +90,8 @@ body {
   color: #000;
 }
 
+/************* TABLE ****************/
+
 table {
   width: 100%;
 }
@@ -126,6 +128,9 @@ td {
 .edit-btn:hover {
   background: #1a71ff;
 }
+
+/****************************/
+
 .new-movie-btn {
   background: #a0ff99;
   color: #000;
@@ -175,6 +180,7 @@ td {
   color: #fff;
 }
 
+/*************** SHOW PAGE ****************/
 .showPoster img {
   width: 300px;
   height: auto;

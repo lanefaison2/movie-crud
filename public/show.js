@@ -19,7 +19,6 @@ $(document).ready(function () {
   idShow = getUrlParameter('id')
 
   $.get(`/movies/${idShow}`, function (movie) {
-    console.log(movie)
 
     $('#movieTitle').val(movie.Title)
     $('#movieDirector').val(movie.Director)

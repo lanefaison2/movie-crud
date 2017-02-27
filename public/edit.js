@@ -2,7 +2,6 @@ var idEdit
 
 $(document).ready(function () {
 
-
   function getUrlParameter(sParam) {
     const sPageURL = decodeURIComponent(window.location.search.substring(1));
     const sURLVariables = sPageURL.split('&');
@@ -20,7 +19,6 @@ $(document).ready(function () {
   idEdit = getUrlParameter('id')
 
   $.get(`/movies/${idEdit}`, function (movie) {
-    console.log(movie)
 
     $('#movieTitle').val(movie.Title)
     $('#movieDirector').val(movie.Director)
@@ -28,10 +26,10 @@ $(document).ready(function () {
     $('#movieRating').val(movie.Rating)
     $('#movieURL').val(movie.URL)
     $('.previewImg').append('<img src=' + movie.URL + '>')
-
   })
 })
 
+// EDITING A MOVIE
 $(document).on('click', '.edit-movie-btn', function (event) {
   event.preventDefault()
   var editedMovie = {
@@ -48,7 +46,6 @@ $(document).on('click', '.edit-movie-btn', function (event) {
     type: 'PUT',
     data: editedMovie,
     success: function (results) {
-      console.log(results)
       console.log('Successfully edited!')
       $('.results').append('<p>' + $('#movieTitle').val() + ' successfully edited!</p>')
       $('.results').fadeOut(5000)
