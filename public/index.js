@@ -47,6 +47,7 @@ $(document).ready(function () {
   // })
   $('#new-movie-form').on('submit', function (event) {
     event.preventDefault()
+    newId++
     var newMovie = {
       Title: $("#movieTitle").val(),
       Director: $("#movieDirector").val(),
@@ -58,10 +59,10 @@ $(document).ready(function () {
     console.log(newMovie)
 
     var jsonMovie = $('#new-movie-form').serialize()
-
-    console.log(jsonMovie)
-
-    console.log($(this).serialize());
+    //
+    // console.log(jsonMovie)
+    //
+    // console.log($(this).serialize());
 
     //This route corresponds to routes.js:22
     $.post('/movies', newMovie, function (result) {
