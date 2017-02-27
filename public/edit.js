@@ -20,15 +20,11 @@ $(document).ready(function () {
   $.get(`/movies/${id}`, function (movie) {
     console.log(movie)
 
-    var clickedTitle = movie.Title
-    var clickedDirector = movie.Director
-    var clickedYear = movie.Year
-    var clickedRating = movie.Rating
-
-    $('#movieTitle').val(clickedTitle)
-    $('#movieDirector').val(clickedDirector)
-    $('#movieYear').val(clickedYear)
-    $('#movieRating').val(clickedRating)
+    $('#movieTitle').val(movie.Title)
+    $('#movieDirector').val(movie.Director)
+    $('#movieYear').val(movie.Year)
+    $('#movieRating').val(movie.Rating)
+    $('#movieURL').val(movie.URL)
 
   })
 
