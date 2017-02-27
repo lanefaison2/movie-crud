@@ -8,7 +8,6 @@ $(document).ready(function () {
   $.get('/movies', function (data) {
     // console.log(data)
     data.forEach(function (movie) {
-      $count++
       $('.movies').append(
         '<tr>' +
         '<td><a href="' +
@@ -33,8 +32,11 @@ $(document).ready(function () {
         '</td>' +
         '</tr>'
       )
+      $count++
     })
   })
+
+
 
   // //This route (not file) corresponds to routes.js:15
   // $.get('/movies/1', function (data) {
