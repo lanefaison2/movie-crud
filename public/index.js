@@ -10,7 +10,7 @@ $(document).ready(function () {
       count++
       console.log(count)
       $('.movies').append(
-        '<tr>' +
+        '<tr id=' + count + '>' +
         '<td><a href="' +
         data[i].URL +
         '">' +
