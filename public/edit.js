@@ -51,7 +51,7 @@ $(document).on('click', '.edit-movie-btn', function (event) {
       console.log(results)
     }
   })
-})
+}) 
 
 // window.location.search.split("&")
 // window.location = "/edit.html?=querystring"
