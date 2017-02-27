@@ -94,7 +94,7 @@ $(document).on('click','.edit-btn', function () {
   newWindow = window.open('edit.html')
   $(newWindow.document.body.form).append('<h1>Some text: ' + clickedDirector + '</h1>')
 
-  // return false;
+  return false;
 
 })
 
