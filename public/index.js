@@ -32,7 +32,7 @@ $(document).ready(function () {
         '</td>' +
         '</tr>'
       )
-      $count++
+      $count = $count++
     })
   })
 
