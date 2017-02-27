@@ -83,14 +83,18 @@ $(document).on('click','.delete-btn', function () {
 })
 
 $(document).on('click','.edit-btn', function () {
+  // This method targets the id of the <tr> contained the clicked button.
   var clickedId = $(this).closest('tr').attr('id')
+
   var clickedTitle = $('#' + clickedId + ' .titleClass').text()
   var clickedDirector = $('#' + clickedId + ' .directorClass').text()
   var clickedYear = $('#' + clickedId + ' .titleYear').text()
   var clickedRating = $('#' + clickedId + ' .titleRating').text()
 
-  window.open(this.parent().href);
-  $('#movieTitle').text(clickedTitle)
+  var new = window.open(this.parent().href)
+  var titles = '<h1>'+clickedTitle+'</h1>'
+  $(new.document.body).append(titles)
+
   return false;
 
 })
