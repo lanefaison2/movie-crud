@@ -9,7 +9,7 @@ $(document).ready(function () {
     // console.log(data)
     for (var i=0;i<data.length;i++) {
       count++
-      newId = data.length + 1
+      newId = data.length
       console.log(newId)
 
       $('.movies').append(
