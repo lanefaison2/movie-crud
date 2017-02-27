@@ -20,8 +20,7 @@ $(document).ready(function () {
     console.log(returner);
     return returner;
   }
-  var id = getUrlParameter('
-  id');
+  var id = getUrlParameter('id');
   console.log(id);
   // $.get('/movies/')
 
