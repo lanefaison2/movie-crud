@@ -53,7 +53,7 @@ $(document).ready(function () {
 
     var jsonMovie = $('#new-movie-form').serialize()
 
-    console.log(jsonMovie)
+    console.log("fuck")
 
     console.log($(this).serialize());
 
