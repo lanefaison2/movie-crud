@@ -64,8 +64,15 @@ $(document).ready(function () {
   })
 
   $('.delete-btn').on('click', function (event) {
-    $.delete('/movies/:id', function () {
-      $(this).remove()
+    $.ajax({
+      url: '/movies',
+      type: 'DELETE',
+      success: function (result) {
+        console.log(result);
+      }
     })
+    // $.delete('/movies/:id', function () {
+    //   $(this).remove()
+    // })
   })
 })
