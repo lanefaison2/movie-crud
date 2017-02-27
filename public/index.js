@@ -62,7 +62,7 @@ $(document).on('click', '.add-movie-btn', function (event) {
   console.log("movieString: " + movieString)
 
     //This route corresponds to routes.js:22
-  $.post('/movies', newMovie, function (result) {
+  $.post('/movies', movieString, function (result) {
     console.log(result)
   })
 })
