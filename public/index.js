@@ -56,6 +56,9 @@ $(document).ready(function () {
     $.post('/movies', jsonMovie, function (result) {
       console.log(result)
     })
+      .done(function (msg) {
+        alert( "Data Saved: " + msg)
+      })
 
   })
 
