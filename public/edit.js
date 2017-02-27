@@ -20,17 +20,15 @@ $(document).ready(function () {
   $.get(`/movies/${id}`, function (movie) {
     console.log(movie)
 
-    // var clickedId = $(this).closest('tr').attr('id')
-
     var clickedTitle = movie.Title
     var clickedDirector = movie.Director
     var clickedYear = movie.Year
     var clickedRating = movie.Rating
-    console.log(clickedTitle)
-    console.log(clickedDirector)
-    console.log(clickedYear)
-    console.log(clickedRating)
 
+    $('#movieTitle').val(clickedTitle)
+    $('#movieDirector').val(clickedDirector)
+    $('#movieYear').val(clickedYear)
+    $('#movieRating').val(clickedRating)
 
   })
 
