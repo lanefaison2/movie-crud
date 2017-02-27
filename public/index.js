@@ -1,11 +1,12 @@
+// The count is used to give each movie an id number so they can be targetted later on. The first movie in the list will have id=1 since the count is ++ before movie is appended.
+// newId is used to add the same id number as the count to the movie's object so it can be targetted later on.
 var count = 0
 var newId
+
 $(document).ready(function () {
 
   // You can only communicate with the server through HTTP requests in here
   // Here we are living on the client's Chrome browser
-  // The count is used to give each movie an id number so they can be targetted later on. The first movie in the list will have id=1 since the count is ++ before movie is appended.
-  // newId is used to add the same id number as the count to the movie's object so it can be targetted later on.
 
   //This route (not file) corresponds to routes.js:9
   $.get('/movies', function (data) {
@@ -43,36 +44,28 @@ $(document).ready(function () {
   })
 })
 
+$(document).on('click', '.add-movie-btn', function (event) {
+  event.preventDefault()
+  newId++
+  var newMovie = {
+    Title: $("#movieTitle").val(),
+    Director: $("#movieDirector").val(),
+    Year: $("#movieYear").val(),
+    Rating: $("#movieRating").val(),
+    "URL": $("#movieURL").val(),
+    id: newId
+  }
+  console.log("newMovie: " + newMovie)
 
+  var movieString = JSON.stringify(newMovie)
 
-  // //This route (not file) corresponds to routes.js:15
-  // $.get('/movies/1', function (data) {
-  //   console.log(data)
-  // })
-  $(document).on('click', '.add-movie-btn', function (event) {
-    event.preventDefault()
-    newId++
-    var newMovie = {
-      Title: $("#movieTitle").val(),
-      Director: $("#movieDirector").val(),
-      Year: $("#movieYear").val(),
-      Rating: $("#movieRating").val(),
-      "URL": $("#movieURL").val(),
-      id: newId
-    }
-    console.log(newMovie)
-
-    // var jsonMovie = $('#new-movie-form').serialize()
-    //
-    // console.log(jsonMovie)
-    //
-    // console.log($(this).serialize());
+  console.log("movieString: " + movieString)
 
     //This route corresponds to routes.js:22
-    $.post('/movies', newMovie, function (result) {
-      console.log(result)
-    })
+  $.post('/movies', newMovie, function (result) {
+    console.log(result)
   })
+})
 
 $(document).on('click','.delete-btn', function (event) {
   // This method targets the id of the <tr> contained the clicked button.
