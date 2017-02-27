@@ -46,7 +46,7 @@ $(document).ready(function () {
       Director: $("#movieDirector").val(),
       Year: $("#movieYear").val(),
       Rating: $("#movieRating").val(),
-      URL: $("#movieURL").val()
+      "URL": $("#movieURL").val()
     }
 
     console.log(newMovie)
