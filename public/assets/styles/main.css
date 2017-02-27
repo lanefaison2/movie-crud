@@ -94,6 +94,8 @@ td {
   background: #fff;
   margin: 150px;
   padding: 50px;
+  width: 400px;
+  height: auto;
 }
 
 #new-movie-form div {
