@@ -28,7 +28,28 @@ $(document).ready(function () {
 
   })
 
+  $(document).on('click', '.edit-movie-btn', function (event) {
+    event.preventDefault()
+    var editedMovie = {
+      Title: $("#movieTitle").val(),
+      Director: $("#movieDirector").val(),
+      Year: $("#movieYear").val(),
+      Rating: $("#movieRating").val(),
+      "URL": $("#movieURL").val(),
+      id: id
+    }
+
+    $.ajax({
+      url: '/movies',
+      type: 'PUT',
+      data: newMovie,
+      success: function (results) {
+        console.log(results)
+      }
+    })
+  })
 })
+
 // window.location.search.split("&")
 // window.location = "/edit.html?=querystring"
 // // console.log(querystring)
