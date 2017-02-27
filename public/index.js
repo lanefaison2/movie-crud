@@ -74,7 +74,7 @@ $(document).ready(function () {
   })
 })
 
-$(document).on('click','.delete-btn' function (event) {
+$(document).on('click','.delete-btn', function (event) {
   $.ajax({
     url: '/movies/:id',
     type: 'DELETE',
