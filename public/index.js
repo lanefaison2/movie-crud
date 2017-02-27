@@ -81,11 +81,11 @@ $(document).on('click','.delete-btn', function () {
   })
 })
 
-$(document).on('click','.edit-btn', function () {
-
-  var clickedId = $(this).closest('tr').attr('id')
-  // This method targets the id of the <tr> contained the clicked button.
-  window.location.search.split("&")
-  window.location = "/edit.html?=querystring"
-
-})
+// $(document).on('click','.edit-btn', function () {
+//
+//   var clickedId = $(this).closest('tr').attr('id')
+//   // This method targets the id of the <tr> contained the clicked button.
+//   window.location.search.split("&")
+//   window.location = "/edit.html?=querystring"
+//
+// })
