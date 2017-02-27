@@ -36,14 +36,14 @@ $(document).ready(function () {
         '<button type="button" class="delete-btn">Delete Movie</button>' +
         '</td>' +
         '<td>' +
-        '<a href="edit.html"><button type="button" class="edit-btn">Edit</button></a>' +
+        `<a href="edit.html?id=${count}"><button type="button" class="edit-btn">Edit</button></a>` +
         '</td>' +
         '</tr>'
       )
     }
   })
 })
-
+?id=${i}
 $(document).on('click', '.add-movie-btn', function (event) {
   event.preventDefault()
   newId++
@@ -55,16 +55,6 @@ $(document).on('click', '.add-movie-btn', function (event) {
     "URL": $("#movieURL").val(),
     id: newId
   }
-  // console.log("newMovie: " + newMovie)
-  //
-  // var movieString = JSON.stringify(newMovie)
-  //
-  // console.log("movieString: " + movieString)
-
-  // ADDING A NEW MOVIE
-  // $.post('/movies', movieString, function (result) {
-  //   console.log(result)
-  // })
 
   $.ajax({
     url: '/movies',
@@ -92,19 +82,10 @@ $(document).on('click','.delete-btn', function () {
 })
 
 $(document).on('click','.edit-btn', function () {
-  // This method targets the id of the <tr> contained the clicked button.
+
   var clickedId = $(this).closest('tr').attr('id')
-
-  var clickedTitle = $('#' + clickedId + ' .titleClass').text()
-  var clickedDirector = $('#' + clickedId + ' .directorClass').text()
-  var clickedYear = $('#' + clickedId + ' .titleYear').text()
-  var clickedRating = $('#' + clickedId + ' .titleRating').text()
-
-  newWindow = window.open('edit.html')
-  $(newWindow.document.body.form).append('<h1>Some text: ' + clickedDirector + '</h1>')
-
-  return false;
+  // This method targets the id of the <tr> contained the clicked button.
+  window.location.search.split("&")
+  window.location = "/edit.html?=querystring"
 
 })
-
-// this.parent().href
