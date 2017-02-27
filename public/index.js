@@ -3,12 +3,15 @@ $(document).ready(function () {
   // You can only communicate with the server through HTTP requests in here
   // Here we are living on the client's Chrome browser
   var count = 0
+  var newId
   //This route (not file) corresponds to routes.js:9
   $.get('/movies', function (data) {
     // console.log(data)
     for (var i=0;i<data.length;i++) {
       count++
-      console.log(count)
+      newId = data.length + 1
+      console.log(newId)
+
       $('.movies').append(
         '<tr id=' + count + '>' +
         '<td><a href="' +
@@ -34,8 +37,6 @@ $(document).ready(function () {
         '</tr>'
       )
     }
-    // data.forEach(function (movie) {
-    // })
   })
 
 
@@ -51,7 +52,8 @@ $(document).ready(function () {
       Director: $("#movieDirector").val(),
       Year: $("#movieYear").val(),
       Rating: $("#movieRating").val(),
-      "URL": $("#movieURL").val()
+      "URL": $("#movieURL").val(),
+      id: newId
     }
     console.log(newMovie)
 
