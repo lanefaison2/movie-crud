@@ -42,11 +42,11 @@ $(document).ready(function () {
   $('#new-movie-form').on('submit', function (event) {
     event.preventDefault()
     var newMovie = {
-      "Title": $("#movieTitle").val(),
-      "Director": $("#movieDirector").val(),
-      "Year": $("#movieYear").val(),
-      "Rating": $("#movieRating").val(),
-      "URL": $("#movieURL").val()
+      Title: $("#movieTitle").val(),
+      Director: $("#movieDirector").val(),
+      Year: $("#movieYear").val(),
+      Rating: $("#movieRating").val(),
+      URL: $("#movieURL").val()
     }
 
     console.log(newMovie)
