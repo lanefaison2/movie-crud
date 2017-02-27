@@ -17,7 +17,6 @@ $(document).ready(function () {
         returner = sParameterName[1] === undefined ? true : sParameterName[1];
       }
     });
-    console.log(returner);
     return returner;
   }
   var id = getUrlParameter('id');
