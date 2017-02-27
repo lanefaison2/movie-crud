@@ -49,15 +49,15 @@ $(document).ready(function () {
       "URL": $("#movieURL").val()
     }
 
-    console.log("newMovie: " + newMovie)
+    console.log(newMovie)
 
     var jsonMovie = $('#new-movie-form').serialize()
 
-    console.log("jsonMovie: " + jsonMovie)
+    console.log(jsonMovie)
 
     //This route corresponds to routes.js:22
     $.post('/movies', jsonMovie, function (result) {
-      console.log("results" + result)
+      console.log(result)
     })
   })
 
