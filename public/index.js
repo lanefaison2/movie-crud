@@ -91,9 +91,9 @@ $(document).on('click','.edit-btn', function () {
   var clickedYear = $('#' + clickedId + ' .titleYear').text()
   var clickedRating = $('#' + clickedId + ' .titleRating').text()
 
-  var new = window.open(this.parent().href)
+  var newWindow = window.open(this.parent().href)
   var html = '<h1>'+clickedTitle+'</h1>'
-  $(new.document.body).append(html)
+  $(newWindow.document.body).append(html)
 
   // return false;
 
