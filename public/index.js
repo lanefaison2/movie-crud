@@ -86,14 +86,13 @@ $(document).on('click','.edit-btn', function () {
   // This method targets the id of the <tr> contained the clicked button.
   var clickedId = $(this).closest('tr').attr('id')
 
-  var clickedTitle = $('#' + clickedId + ' .titleClass').text()
+  var clickedTitle = $('#' + clickedId + ' .titleClass').html()
   var clickedDirector = $('#' + clickedId + ' .directorClass').text()
   var clickedYear = $('#' + clickedId + ' .titleYear').text()
   var clickedRating = $('#' + clickedId + ' .titleRating').text()
 
   var new = window.open(this.parent().href)
-  var titles = '<h1>'+clickedTitle+'</h1>'
-  $(new.document.body).append(titles)
+  $(new.document.body).html(clickedTitle)
 
   return false;
 
