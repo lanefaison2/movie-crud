@@ -95,6 +95,6 @@ $(document).on('click','.edit-btn', function () {
   var html = '<h1>'+clickedTitle+'</h1>'
   $(newWindow.document.body).append(html)
 
-  // return false;
+  return false;
 
 })
