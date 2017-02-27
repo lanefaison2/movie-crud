@@ -1,5 +1,7 @@
 body {
   background: #000;
+  display: flex;
+  justify-content: center;
 }
 
 .cover-photo img {
@@ -92,7 +94,7 @@ td {
 
 .add-movie-section {
   background: #fff;
-  margin: 150px;
+  margin: 150px auto;
   padding: 50px;
   width: 400px;
   height: auto;
