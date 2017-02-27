@@ -75,22 +75,18 @@ $(document).ready(function () {
 })
 
 $(document).on('click','.delete-btn', function (event) {
-
+  // This method targets the id of the <tr> contained the clicked button.
   var clickedId = $(this).closest('tr').attr('id')
-  console.log(clickedId)
 
   $.ajax({
     url: '/movies/' + clickedId,
     type: 'DELETE',
     success: function () {
-      console.log("working?")
+      console.log("Movie successfully removed")
       $('#' + clickedId).remove()
     }
   })
   $.get('movies', function (data) {
     console.log(data);
   })
-  // $.delete('/movies/:id', function () {
-  //   $(this).remove()
-  // })
 })
