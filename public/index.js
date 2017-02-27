@@ -56,10 +56,6 @@ $(document).ready(function () {
     $.post('/movies', jsonMovie, function (result) {
       console.log(result)
     })
-      .done(function (result) {
-        console.log(result);
-      })
-
   })
 
   $('.delete-btn').on('click', function (event) {

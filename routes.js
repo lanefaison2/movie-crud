@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const low = require('lowdb')
 const fileAsync = require('lowdb/lib/storages/file-async')
-const db = low('db/db.json', {
+const db = low('.db/db.json', {
   storage: fileAsync
 })
 
