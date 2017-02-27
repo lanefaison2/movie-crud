@@ -75,15 +75,16 @@ $(document).ready(function () {
 })
 
 $(document).on('click','.delete-btn', function (event) {
+
   var clickedId = $(this).closest('tr').attr('id')
   console.log(clickedId)
 
   $.ajax({
-    url: '/movies/:id',
+    url: '/movies/' + clickedId,
     type: 'DELETE',
     success: function () {
       console.log("working?")
-      $('#' + '/movies/:id').remove()
+      $('#' + '/movies/' + clickedId).remove()
     }
   })
   $.get('movies', function (data) {
