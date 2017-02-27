@@ -84,7 +84,7 @@ $(document).on('click','.delete-btn', function (event) {
     type: 'DELETE',
     success: function () {
       console.log("working?")
-      $('#' + '/movies/' + clickedId).remove()
+      $('#' + clickedId).remove()
     }
   })
   $.get('movies', function (data) {
