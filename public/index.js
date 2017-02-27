@@ -62,8 +62,17 @@ $(document).on('click', '.add-movie-btn', function (event) {
   console.log("movieString: " + movieString)
 
     //This route corresponds to routes.js:22
-  $.post('/movies', movieString, function (result) {
-    console.log(result)
+  // $.post('/movies', movieString, function (result) {
+  //   console.log(result)
+  // })
+  $.ajax({
+    url: '/movies',
+    type: 'POST',
+    data: movieString,
+    success: function (result) {
+      console.log('I think it worked')
+      console.log(result)
+    }
   })
 })
 
