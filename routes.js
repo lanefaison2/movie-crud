@@ -21,6 +21,7 @@ router.get('/movies/:id', (req, res) => {
 
 //CRUD Create
 router.post('/movies', (req, res) => {
+  req.body.id = parseInt(req.body.id)
   db.get('movies')
     .push(req.body)
     .write()
@@ -36,6 +37,7 @@ router.post('/movies', (req, res) => {
 //CRUD Update
 router.put('/movies/:id', (req, res) => {
   const movieId = parseInt(req.params.id)
+  req.body.id = parseInt(req.body.id)
   db.get('movies')
     .find({id: movieId})
     .assign(req.body)

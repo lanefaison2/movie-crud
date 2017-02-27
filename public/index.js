@@ -1,7 +1,7 @@
 // The count is used to give each movie an id number so they can be targetted later on. The first movie in the list will have id=1 since the count is ++ before movie is appended.
 // newId is used to add the same id number as the count to the movie's object so it can be targetted later on.
 var count = 0
-var newId
+var newId = 0
 
 $(document).ready(function () {
 

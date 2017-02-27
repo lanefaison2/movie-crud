@@ -1,19 +1,19 @@
 {
   "movies": [
     {
-      "Title": "Black Hawk Down",
-      "Director": "Ridley Scott",
-      "Year": 2001,
-      "Rating": 5,
-      "URL": "http://www.sonypictures.com/movies/blackhawkdown/",
+      "Title": "Jurassic Park",
+      "Director": "Steven Spielberg",
+      "Year": "1993",
+      "Rating": "1",
+      "URL": "www.jurassicpark.com",
       "id": 1
     },
     {
       "Title": "American Sniper",
-      "Director": "Clint Eastwood",
-      "Year": 2014,
-      "Rating": 5,
-      "URL": "http://www.americansnipermovie.com/",
+      "Director": "Rigley Scott",
+      "Year": "2014",
+      "Rating": "4",
+      "URL": "www.americansniper.com",
       "id": 2
     }
   ]
