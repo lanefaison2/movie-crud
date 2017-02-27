@@ -69,6 +69,10 @@ body {
   justify-content: space-between;
 }
 
+.all-movies-and-new-movie h1, .add-movie-section h1,  {
+  font-family: 'permanent marker',cursive;
+}
+
 .movie-section {
   background: #fff;
   margin: 150px;
@@ -110,6 +114,7 @@ td {
 
 .new-movie-btn:hover {
   background: #00c03a;
+  color: #ddd;
 }
 
 .add-movie-section {
