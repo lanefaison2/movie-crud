@@ -55,15 +55,24 @@ $(document).on('click', '.add-movie-btn', function (event) {
     "URL": $("#movieURL").val(),
     id: newId
   }
-  console.log("newMovie: " + newMovie)
-
-  var movieString = JSON.stringify(newMovie)
-
-  console.log("movieString: " + movieString)
+  // console.log("newMovie: " + newMovie)
+  //
+  // var movieString = JSON.stringify(newMovie)
+  //
+  // console.log("movieString: " + movieString)
 
   // ADDING A NEW MOVIE
-  $.post('/movies/', movieString, function (result) {
+  $.post('/movies', movieString, function (result) {
     console.log(result)
+  })
+
+  $.ajax({
+    url: '/movies',
+    type: 'POST',
+    data: newMovie,
+    success: function (results) {
+      console.log(results)
+    }
   })
 })
 
