@@ -1,3 +1,5 @@
+var count = 0
+var newId
 $(document).ready(function () {
 
   // You can only communicate with the server through HTTP requests in here
@@ -5,8 +7,6 @@ $(document).ready(function () {
   // The count is used to give each movie an id number so they can be targetted later on. The first movie in the list will have id=1 since the count is ++ before movie is appended.
   // newId is used to add the same id number as the count to the movie's object so it can be targetted later on.
 
-  var count = 0
-  var newId
   //This route (not file) corresponds to routes.js:9
   $.get('/movies', function (data) {
     // console.log(data)
@@ -41,6 +41,7 @@ $(document).ready(function () {
       )
     }
   })
+})
 
 
 
@@ -48,7 +49,7 @@ $(document).ready(function () {
   // $.get('/movies/1', function (data) {
   //   console.log(data)
   // })
-  $('#new-movie-form').on('submit', function (event) {
+  $(document).on('click', '.add-movie-btn', function (event) {
     event.preventDefault()
     newId++
     var newMovie = {
@@ -61,7 +62,7 @@ $(document).ready(function () {
     }
     console.log(newMovie)
 
-    var jsonMovie = $('#new-movie-form').serialize()
+    // var jsonMovie = $('#new-movie-form').serialize()
     //
     // console.log(jsonMovie)
     //
@@ -72,7 +73,6 @@ $(document).ready(function () {
       console.log(result)
     })
   })
-})
 
 $(document).on('click','.delete-btn', function (event) {
   // This method targets the id of the <tr> contained the clicked button.
@@ -85,8 +85,5 @@ $(document).on('click','.delete-btn', function (event) {
       console.log("Movie successfully removed")
       $('#' + clickedId).remove()
     }
-  })
-  $.get('movies', function (data) {
-    console.log(data);
   })
 })
