@@ -85,12 +85,12 @@ $(document).on('click','.delete-btn', function () {
 $(document).on('click','.edit-btn', function () {
   var clickedId = $(this).closest('tr').attr('id')
   var clickedTitle = $('#' + clickedId + ' .titleClass').text()
-  console.log("clickedTitle: " + clickedTitle)
-  // var clickedTitle = $(this).closest('tr')
-  // var clickedDirector =
-  // var clickedYear =
-  // var clickedRating =
+  var clickedDirector = $('#' + clickedId + ' .directorClass').text()
+  var clickedYear = $('#' + clickedId + ' .titleYear').text()
+  var clickedRating = $('#' + clickedId + ' .titleRating').text()
+
   window.open(this.parent().href);
+  $('#movieTitle').text(clickedTitle)
   return false;
 
 })
