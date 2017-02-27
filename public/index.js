@@ -6,7 +6,9 @@ $(document).ready(function () {
   //This route (not file) corresponds to routes.js:9
   $.get('/movies', function (data) {
     // console.log(data)
+    var count = 0
     data.forEach(function (movie) {
+      count++
       $('.movies').append(
         '<tr>' +
         '<td><a href="' +
@@ -38,9 +40,10 @@ $(document).ready(function () {
   // $.get('/movies/1', function (data) {
   //   console.log(data)
   // })
-
+  console.log("count before add: " + count);
   $('#new-movie-form').on('submit', function (event) {
     event.preventDefault()
+    count++
     var newMovie = {
       Title: $("#movieTitle").val(),
       Director: $("#movieDirector").val(),
@@ -48,7 +51,7 @@ $(document).ready(function () {
       Rating: $("#movieRating").val(),
       "URL": $("#movieURL").val()
     }
-
+    console.log("count after add: " + count);
     console.log(newMovie)
 
     var jsonMovie = $('#new-movie-form').serialize()
