@@ -101,4 +101,11 @@ td {
 #new-movie-form div {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.add-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
