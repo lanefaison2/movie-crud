@@ -1,7 +1,6 @@
-var idEdit
+var idShow
 
 $(document).ready(function () {
-
 
   function getUrlParameter(sParam) {
     const sPageURL = decodeURIComponent(window.location.search.substring(1));
@@ -17,9 +16,9 @@ $(document).ready(function () {
     return returner;
   }
 
-  idEdit = getUrlParameter('id')
+  idShow = getUrlParameter('id')
 
-  $.get(`/movies/${idEdit}`, function (movie) {
+  $.get(`/movies/${idShow}`, function (movie) {
     console.log(movie)
 
     $('#movieTitle').val(movie.Title)
@@ -28,30 +27,8 @@ $(document).ready(function () {
     $('#movieRating').val(movie.Rating)
     $('#movieURL').val(movie.URL)
     $('.previewImg').append('<img src=' + movie.URL + '>')
-
-  })
-})
-
-$(document).on('click', '.edit-movie-btn', function (event) {
-  event.preventDefault()
-  var editedMovie = {
-    Title: $("#movieTitle").val(),
-    Director: $("#movieDirector").val(),
-    Year: $("#movieYear").val(),
-    Rating: $("#movieRating").val(),
-    "URL": $("#movieURL").val(),
-    id: idEdit
-  }
-
-  $.ajax({
-    url: `/movies/${idEdit}`,
-    type: 'PUT',
-    data: editedMovie,
-    success: function (results) {
-      console.log(results)
-      console.log('Successfully edited!')
-      $('.results').append('<p>' + $('#movieTitle').val() + ' successfully edited!</p>')
-      $('.results').fadeOut(5000)
-    }
+    $('.page-title').text(movie.Title)
+    $('.showPoster').append('<img src=' + movie.URL + '>')
+    $('.showInfo').append('<p class="category">Title: ' + movie.Title + '</p><p class="category">Director: ' + movie.Director + '</p><p class="category">Year: ' + movie.Year + '</p><p class="category">Rating: ' + movie.Rating + '</p>')
   })
 })

@@ -14,7 +14,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- JAVASCRIPT -->
-    <script src="./index.js"></script>
+    <script src="./show.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.css">
@@ -29,40 +29,17 @@
           <a class="navbar-brand" href="home.html">
             <img src="./assets/images/camera.png" alt="camera logo">
           </a>
-          <p class="navbar-text page-title">Add A Movie!</p>
+          <!--***************************-->
+          <p class="navbar-text page-title"></p>
         </div>
       </div><!-- /.container-fluid -->
     </nav>
-    <main class="add-movie-section">
-      <h1>Add A Movie</h1>
-      <form id="new-movie-form">
-        <div>
-          <label>Title: </label>
-          <input type="text" id="movieTitle" placeholder="ex. Jurassic Park">
-        </div>
-        <div>
-          <label>Director: </label>
-          <input type="text" id="movieDirector" placeholder="ex. Steven Spielberg">
-        </div>
-        <div>
-          <label>Year: </label>
-          <input type="text" id="movieYear" placeholder="ex. 1993">
-        </div>
-        <div>
-          <label>My Rating: </label>
-          <input type="text" id="movieRating" placeholder="1 to 5">
-        </div>
-        <div>
-          <label>Poster URL: </label>
-          <input type="text" id="movieURL" placeholder="www.example.com">
-        </div>
-        <div class="add-buttons">
-          <a href="#"><button type="submit" class="add-movie-btn btn btn-default">Add Movie</button></a>
-          <a href="index.html"><button type="button" class="btn btn-default">Back to Movies</button></a>
-        </div>
-      </form>
-      <div class="results"></div>
+    <main class="show-section">
+      <div class="showPoster"></div>
+      <div class="showInfo"></div>
+      <a href="index.html"><button type="button" class="btn btn-default">Back to Movies</button></a>
     </main>
+
 
     <nav class="navbar navbar-inverse navbar-fixed-bottom">
       <div class="container-fluid">

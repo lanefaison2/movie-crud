@@ -18,9 +18,7 @@ $(document).ready(function () {
 
       $('.movies').append(
         '<tr id=' + count + '>' +
-        '<td class="titleClass"><a class="posterClass" href="' +
-        data[i].URL +
-        '">' +
+        `<td class="titleClass"><a class="posterClass" href="show.html?id=${count}">` +
         data[i].Title +
         '</a></td>' +
         '<td class="directorClass">' +
@@ -61,7 +59,8 @@ $(document).on('click', '.add-movie-btn', function (event) {
     type: 'POST',
     data: newMovie,
     success: function (results) {
-      console.log(results)
+      $('.results').append('<p>' + $('#movieTitle').val() + ' successfully added!</p>')
+      $('.results').fadeOut(5000)
     }
   })
 })

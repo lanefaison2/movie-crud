@@ -4,17 +4,25 @@
       "Title": "Jurassic Park",
       "Director": "Steven Spielberg",
       "Year": "1993",
-      "Rating": "1",
-      "URL": "www.jurassicpark.com",
+      "Rating": "4",
+      "URL": "http://img.moviepostershop.com/jurassic-park-movie-poster-1992-1020141477.jpg",
       "id": 1
     },
     {
       "Title": "American Sniper",
       "Director": "Rigley Scott",
       "Year": "2014",
-      "Rating": "4",
-      "URL": "www.americansniper.com",
+      "Rating": "5",
+      "URL": "http://www.impawards.com/2014/posters/american_sniper.jpg",
       "id": 2
+    },
+    {
+      "Title": "Lone Survivor",
+      "Director": "Peter Berg",
+      "Year": "2013",
+      "Rating": "5",
+      "URL": "http://www.impawards.com/2013/posters/lone_survivor.jpg",
+      "id": 3
     }
   ]
 }
