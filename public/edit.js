@@ -1,5 +1,9 @@
 
 $(document).ready(function () {
+
+  //   window.location.search.split("&")
+  //   window.location = "/edit.html?=querystring"
+
   function getUrlParameter(sParam) {
     const sPageURL = decodeURIComponent(window.location.search.substring(1));
     const sURLVariables = sPageURL.split('&');
@@ -13,8 +17,9 @@ $(document).ready(function () {
     });
     console.log(returner);
     return returner;
-
   }
+  getUrlParameter();
+
 })
 
 
