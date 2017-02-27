@@ -95,3 +95,8 @@ td {
   margin: 150px;
   padding: 50px;
 }
+
+#new-movie-form div {
+  display: flex;
+  justify-content: space-between;
+}
