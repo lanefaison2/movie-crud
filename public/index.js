@@ -60,20 +60,13 @@ $(document).on('click', '.add-movie-btn', function (event) {
   var movieString = JSON.stringify(newMovie)
 
   console.log("movieString: " + movieString)
+  $.isPlainObject(movieString)
 
-    //This route corresponds to routes.js:22
-  // $.post('/movies', movieString, function (result) {
-  //   console.log(result)
-  // })
-  $.ajax({
-    url: '/movies',
-    type: 'POST',
-    data: movieString,
-    success: function (result) {
-      console.log('I think it worked')
-      console.log(result)
-    }
+  // This route corresponds to routes.js:22
+  $.post('/movies', movieString, function (result) {
+    console.log(result)
   })
+
 })
 
 $(document).on('click','.delete-btn', function (event) {
