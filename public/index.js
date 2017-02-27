@@ -53,12 +53,12 @@ $(document).ready(function () {
 
     var jsonMovie = $('#new-movie-form').serialize()
 
-    console.log("fuck")
+    console.log(jsonMovie)
 
     console.log($(this).serialize());
 
     //This route corresponds to routes.js:22
-    $.post('/movies', jsonMovie, function (result) {
+    $.post('/movies', newMovie, function (result) {
       console.log(result)
     })
   })
