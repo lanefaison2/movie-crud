@@ -60,7 +60,7 @@ $(document).on('click', '.add-movie-btn', function (event) {
   var movieString = JSON.stringify(newMovie)
 
   console.log("movieString: " + movieString)
-  $.isPlainObject(movieString)
+  console.log($.isPlainObject(movieString))
 
   // This route corresponds to routes.js:22
   $.post('/movies', movieString, function (result) {
