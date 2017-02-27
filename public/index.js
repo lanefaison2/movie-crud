@@ -27,7 +27,7 @@ $(document).ready(function () {
         '<button type="button" class="delete-btn">Delete Movie</button>' +
         '</td>' +
         '<td>' +
-        '<button type="button" class="edit-btn">Edit</button>' +
+        '<a href="edit.html"><button type="button" class="edit-btn">Edit</button></a>' +
         '</td>' +
         '</tr>'
       )
