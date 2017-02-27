@@ -2,15 +2,18 @@ $(document).ready(function () {
 
   // You can only communicate with the server through HTTP requests in here
   // Here we are living on the client's Chrome browser
+  // The count is used to give each movie an id number so they can be targetted later on. The first movie in the list will have id=1 since the count is ++ before movie is appended.
+  // newId is used to add the same id number as the count to the movie's object so it can be targetted later on.
+
   var count = 0
   var newId
   //This route (not file) corresponds to routes.js:9
   $.get('/movies', function (data) {
     // console.log(data)
     for (var i=0;i<data.length;i++) {
+
       count++
       newId = data.length
-      console.log(newId)
 
       $('.movies').append(
         '<tr id=' + count + '>' +
@@ -72,12 +75,12 @@ $(document).ready(function () {
 
   $('.delete-btn').on('click', function (event) {
     $.ajax({
-      url: '/movies/Title',
+      url: '/movies/:id',
       type: 'DELETE',
       success: function (result) {
-        console.log(result);
-        console.log("working?");
-        $(this).remove()
+        console.log(result)
+        console.log("working?")
+        $('#' + '/movies/:id').remove()
       }
     })
     // $.delete('/movies/:id', function () {
