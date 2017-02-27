@@ -6,9 +6,9 @@ $(document).ready(function () {
   //This route (not file) corresponds to routes.js:9
   $.get('/movies', function (data) {
     // console.log(data)
-    var count = 0
+    var $count = 0
     data.forEach(function (movie) {
-      count++
+      $count++
       $('.movies').append(
         '<tr>' +
         '<td><a href="' +
