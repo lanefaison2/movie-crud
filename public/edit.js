@@ -22,7 +22,7 @@ $(document).ready(function () {
   }
   var id = getUrlParameter('id');
   console.log(id);
-  $.get('/movies/:id', function (result) {
+  $.get(`/movies/${id}`, function (result) {
     console.log(result);
   })
 
