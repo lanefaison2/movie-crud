@@ -50,7 +50,7 @@ router.put('/movies/:id', (req, res) => {
 
 //CRUD delete
 //Orginal: router.delete('/movies/:id', (req, res) => {
-router.delete('/movies/:Title', (req, res) => {
+router.delete('/movies/Title', (req, res) => {
 
   //Original: const movieId = parseInt(req.params.id)
   const movieId = req.params.Title
