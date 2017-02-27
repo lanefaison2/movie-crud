@@ -41,6 +41,7 @@ $(document).on('click', '.edit-movie-btn', function (event) {
     "URL": $("#movieURL").val(),
     id: idEdit
   }
+  console.log(editedMovie);
 
   $.ajax({
     url: '/movies',
