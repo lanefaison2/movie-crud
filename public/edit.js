@@ -1,10 +1,10 @@
 
 $(document).ready(function () {
 
-  window.location.search.split("&")
-  window.location = "/edit.html?=querystring"
-  console.log(querystring)
-  console.log(window.location);
+  // window.location.search.split("&")
+  // window.location = "/edit.html?=querystring"
+  // console.log(querystring)
+  // console.log(window.location);
 
   // function getUrlParameter(sParam) {
   //   const sPageURL = decodeURIComponent(window.location.search.substring(1));
