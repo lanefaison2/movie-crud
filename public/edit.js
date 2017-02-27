@@ -22,10 +22,10 @@ $(document).ready(function () {
 
     // var clickedId = $(this).closest('tr').attr('id')
 
-    var clickedTitle = $('#' + id + ' .titleClass').text()
-    var clickedDirector = $('#' + id + ' .directorClass').text()
-    var clickedYear = $('#' + id + ' .titleYear').text()
-    var clickedRating = $('#' + id + ' .titleRating').text()
+    var clickedTitle = movie.Title.text()
+    var clickedDirector = movie.Director.text()
+    var clickedYear = movie.Year.text()
+    var clickedRating = movie.Rating.text()
     console.log(clickedTitle)
     console.log(clickedDirector)
     console.log(clickedYear)
