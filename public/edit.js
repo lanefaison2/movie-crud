@@ -41,7 +41,6 @@ $(document).on('click', '.edit-movie-btn', function (event) {
     "URL": $("#movieURL").val(),
     id: idEdit
   }
-  console.log(editedMovie);
 
   $.ajax({
     url: `/movies/${idEdit}`,
@@ -49,9 +48,10 @@ $(document).on('click', '.edit-movie-btn', function (event) {
     data: editedMovie,
     success: function (results) {
       console.log(results)
+      console.log('Successfully edited!')
     }
   })
-}) 
+})
 
 // window.location.search.split("&")
 // window.location = "/edit.html?=querystring"
