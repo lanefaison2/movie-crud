@@ -12,18 +12,18 @@ $(document).ready(function () {
       $('.movies').append(
         '<tr>' +
         '<td><a href="' +
-        movie.URL +
+        data[i].URL +
         '">' +
-        movie.Title +
+        data[i].Title +
         '</a></td>' +
         '<td>' +
-        movie.Director +
+        data[i].Director +
         '</td>' +
         '<td>' +
-        movie.Year +
+        data[i].Year +
         '</td>' +
         '<td>' +
-        movie.Rating +
+        data[i].Rating +
         '</td>' +
         '<td>' +
         '<button type="button" class="delete-btn">Delete Movie</button>' +
