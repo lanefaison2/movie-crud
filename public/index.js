@@ -18,18 +18,18 @@ $(document).ready(function () {
 
       $('.movies').append(
         '<tr id=' + count + '>' +
-        '<td><a href="' +
+        '<td class="titleClass"><a class="posterClass" href="' +
         data[i].URL +
         '">' +
         data[i].Title +
         '</a></td>' +
-        '<td>' +
+        '<td class="directorClass">' +
         data[i].Director +
         '</td>' +
-        '<td>' +
+        '<td class="yearClass">' +
         data[i].Year +
         '</td>' +
-        '<td>' +
+        '<td class="ratingClass">' +
         data[i].Rating +
         '</td>' +
         '<td>' +
@@ -84,8 +84,8 @@ $(document).on('click','.delete-btn', function () {
 
 $(document).on('click','.edit-btn', function () {
   var clickedId = $(this).closest('tr').attr('id')
-  var clickedTitle = $(clickedId + ' td:nth-child(1)')
-  console.log("clickedTitle: " + clickedTitle);
+  var clickedTitle = $(clickedId.titleClass)
+  console.log("clickedTitle: " + clickedTitle)
   // var clickedTitle = $(this).closest('tr')
   // var clickedDirector =
   // var clickedYear =
