@@ -3,10 +3,10 @@ $(document).ready(function () {
   // You can only communicate with the server through HTTP requests in here
   // Here we are living on the client's Chrome browser
 
+  var $count = 0
   //This route (not file) corresponds to routes.js:9
   $.get('/movies', function (data) {
     // console.log(data)
-    var $count = 0
     data.forEach(function (movie) {
       $count++
       $('.movies').append(
@@ -40,10 +40,10 @@ $(document).ready(function () {
   // $.get('/movies/1', function (data) {
   //   console.log(data)
   // })
-  console.log("count before add: " + count);
+  console.log("count before add: " + $count);
   $('#new-movie-form').on('submit', function (event) {
     event.preventDefault()
-    count++
+    $count++
     var newMovie = {
       Title: $("#movieTitle").val(),
       Director: $("#movieDirector").val(),
@@ -51,7 +51,7 @@ $(document).ready(function () {
       Rating: $("#movieRating").val(),
       "URL": $("#movieURL").val()
     }
-    console.log("count after add: " + count);
+    console.log("count after add: " + $count);
     console.log(newMovie)
 
     var jsonMovie = $('#new-movie-form').serialize()
