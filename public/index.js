@@ -62,9 +62,9 @@ $(document).on('click', '.add-movie-btn', function (event) {
   // console.log("movieString: " + movieString)
 
   // ADDING A NEW MOVIE
-  $.post('/movies', movieString, function (result) {
-    console.log(result)
-  })
+  // $.post('/movies', movieString, function (result) {
+  //   console.log(result)
+  // })
 
   $.ajax({
     url: '/movies',
