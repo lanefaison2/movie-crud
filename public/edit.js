@@ -1,10 +1,6 @@
 
 $(document).ready(function () {
 
-  // window.location.search.split("&")
-  // window.location = "/edit.html?=querystring"
-  // // console.log(querystring)
-  // // console.log(window.location);
 
   function getUrlParameter(sParam) {
     const sPageURL = decodeURIComponent(window.location.search.substring(1));
@@ -19,23 +15,33 @@ $(document).ready(function () {
     });
     return returner;
   }
-  var id = getUrlParameter('id');
-  console.log(id);
-  $.get(`/movies/${id}`, function (result) {
-    console.log(result);
+  var id = getUrlParameter('id')
+
+  $.get(`/movies/${id}`, function (movie) {
+    console.log(movie)
+
+    // var clickedId = $(this).closest('tr').attr('id')
+
+    var clickedTitle = $('#' + id + ' .titleClass').text()
+    var clickedDirector = $('#' + id + ' .directorClass').text()
+    var clickedYear = $('#' + id + ' .titleYear').text()
+    var clickedRating = $('#' + id + ' .titleRating').text()
+    console.log(clickedTitle)
+    console.log(clickedDirector)
+    console.log(clickedYear)
+    console.log(clickedRating)
+
+
   })
 
 })
-// Get to data on // ID
+// window.location.search.split("&")
+// window.location = "/edit.html?=querystring"
+// // console.log(querystring)
+// // console.log(window.location);
 
 
 
 
 //
 // // This method targets the id of the <tr> contained the clicked button.
-// var clickedId = $(this).closest('tr').attr('id')
-//
-// var clickedTitle = $('#' + clickedId + ' .titleClass').text()
-// var clickedDirector = $('#' + clickedId + ' .directorClass').text()
-// var clickedYear = $('#' + clickedId + ' .titleYear').text()
-// var clickedRating = $('#' + clickedId + ' .titleRating').text()
