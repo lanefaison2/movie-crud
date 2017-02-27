@@ -70,6 +70,12 @@ $(document).on('click', '.add-movie-btn', function (event) {
 
 })
 
+$(document).on('click','.add-movie-btn2', function () {
+  $.get('/movies', function (result) {
+    console.log(result);
+  })
+})
+
 $(document).on('click','.delete-btn', function (event) {
   // This method targets the id of the <tr> contained the clicked button.
   var clickedId = $(this).closest('tr').attr('id')
