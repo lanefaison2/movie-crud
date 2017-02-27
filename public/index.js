@@ -91,11 +91,10 @@ $(document).on('click','.edit-btn', function () {
   var clickedYear = $('#' + clickedId + ' .titleYear').text()
   var clickedRating = $('#' + clickedId + ' .titleRating').text()
 
-  var html = '<h1>Some text: ' + clickedTitle + '</h1>'
-  window.open('edit.html').document.body.innerHTML += html
-  // $(newWindow.document.body.form).append('<h1>Some text: ' + clickedTitle + '</h1>')
+  newWindow = window.open('edit.html')
+  $(newWindow.document.body.form).append('<h1>Some text: ' + clickedDirector + '</h1>')
 
-  return false;
+  // return false;
 
 })
 
