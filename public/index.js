@@ -83,6 +83,9 @@ $(document).ready(function () {
         $('#' + '/movies/:id').remove()
       }
     })
+    $.get('movies', function (data) {
+      console.log(data);
+    })
     // $.delete('/movies/:id', function () {
     //   $(this).remove()
     // })
