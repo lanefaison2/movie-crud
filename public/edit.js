@@ -44,7 +44,7 @@ $(document).on('click', '.edit-movie-btn', function (event) {
   console.log(editedMovie);
 
   $.ajax({
-    url: '/movies',
+    url: `/movies/${idEdit}`,
     type: 'PUT',
     data: editedMovie,
     success: function (results) {
