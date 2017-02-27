@@ -8,7 +8,7 @@ $(document).ready(function () {
   // You can only communicate with the server through HTTP requests in here
   // Here we are living on the client's Chrome browser
 
-  //This route (not file) corresponds to routes.js:9
+  //GETTING ALL THE MOVIES
   $.get('/movies', function (data) {
     // console.log(data)
     for (var i=0;i<data.length;i++) {
@@ -61,16 +61,17 @@ $(document).on('click', '.add-movie-btn', function (event) {
 
   console.log("movieString: " + movieString)
 
-  // This route corresponds to routes.js:22
+  // ADDING A NEW MOVIE
   $.post('/movies/', movieString, function (result) {
     console.log(result)
   })
 })
 
-$(document).on('click','.delete-btn', function (event) {
+$(document).on('click','.delete-btn', function () {
   // This method targets the id of the <tr> contained the clicked button.
   var clickedId = $(this).closest('tr').attr('id')
 
+  // DELETING A NEW MOVIE
   $.ajax({
     url: '/movies/' + clickedId,
     type: 'DELETE',
@@ -79,4 +80,11 @@ $(document).on('click','.delete-btn', function (event) {
       $('#' + clickedId).remove()
     }
   })
+})
+
+$(document).on('click','.edit-btn', function () {
+  var clickedId = $(this).closest('tr').attr('id')
+  window.open(this.href);
+  return false;
+
 })
