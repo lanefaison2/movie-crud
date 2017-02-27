@@ -55,6 +55,8 @@ $(document).ready(function () {
 
     console.log(jsonMovie)
 
+    console.log($(this).serialize());
+
     //This route corresponds to routes.js:22
     $.post('/movies', jsonMovie, function (result) {
       console.log(result)
