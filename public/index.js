@@ -43,7 +43,7 @@ $(document).ready(function () {
     }
   })
 })
-?id=${i}
+
 $(document).on('click', '.add-movie-btn', function (event) {
   event.preventDefault()
   newId++
